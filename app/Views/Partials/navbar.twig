@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .search-container {
+            display: flex;
+            align-items: center;
+        }
+
+        label {
+            font-size: 16px;
+            color: #fff;
+            margin-right: 10px;
+        }
+
+        input[type="text"],
+        input[type="date"] {
+            padding: 8px;
+            border: 2px solid #fff;
+            border-radius: 5px;
+            background-color: transparent;
+            color: #fff;
+            margin-right: 10px;
+            outline: none;
+        }
+
+        button[type="submit"] {
+            padding: 8px 12px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .flag-buttons {
+            display: flex;
+        }
+
+        .flag-button {
+            background-color: #333;
+            border: none;
+            font-size: 24px;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <div class="flag-buttons">
+        <form action="/" method="get">
+            <button class="flag-button" name="country" value="lv">🇱🇻</button>
+            <button class="flag-button" name="country" value="ru">🇷🇺</button>
+            <button class="flag-button" name="country" value="us">🇺🇸</button>
+        </form>
+    </div>
+
+    <div class="search-container">
+        <form action="/" method="get">
+            <label for="search">Search for:</label>
+            <input type="text" id="search" name="search" placeholder="Search term">
+
+            <label for="fromDate">From date:</label>
+            <input type="date" id="fromDate" name="fromDate">
+
+            <label for="toDate">To date:</label>
+            <input type="date" id="toDate" name="toDate">
+
+            <button type="submit">Search</button>
+        </form>
+    </div>
+</nav>
+</body>
+</html>
